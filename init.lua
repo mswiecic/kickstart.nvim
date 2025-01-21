@@ -193,6 +193,10 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Quit like in LazyVim
 vim.keymap.set('n', '<leader>qq', '<Esc>:q!\n', { desc = 'Quit immediately' })
 
+-- [[ User commands ]]
+-- See: `:help nvim_create_user_command`
+vim.api.nvim_create_user_command('FormatJson', '%!jq', {})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
